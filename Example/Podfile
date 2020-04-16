@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'QuickDB_Example' do
+  pod 'QuickDB', :path => '../'
+
+  target 'QuickDB_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
