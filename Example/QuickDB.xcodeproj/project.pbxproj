@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		01A0AEE507C9C7B9C15586F9 /* Pods_QuickDB_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E878D2AE2CE42F8F7EC08C94 /* Pods_QuickDB_Tests.framework */; };
+		13AE82482450D42C00BE5FF5 /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE82472450D42C00BE5FF5 /* MyModel.swift */; };
+		13AE824A2450D43D00BE5FF5 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE82492450D43D00BE5FF5 /* ImageModel.swift */; };
+		13AE824C2450D44B00BE5FF5 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE824B2450D44B00BE5FF5 /* UserModel.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -29,6 +32,9 @@
 
 /* Begin PBXFileReference section */
 		0DA24571446657A6032EAA82 /* Pods-QuickDB_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickDB_Example.release.xcconfig"; path = "Target Support Files/Pods-QuickDB_Example/Pods-QuickDB_Example.release.xcconfig"; sourceTree = "<group>"; };
+		13AE82472450D42C00BE5FF5 /* MyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyModel.swift; sourceTree = "<group>"; };
+		13AE82492450D43D00BE5FF5 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		13AE824B2450D44B00BE5FF5 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		14C4D4F9D19F89B5B72405A1 /* Pods-QuickDB_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickDB_Tests.release.xcconfig"; path = "Target Support Files/Pods-QuickDB_Tests/Pods-QuickDB_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		1B77898AE10D5C192C704142 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		407D1F6DBA35DAA7FE91EAC3 /* Pods-QuickDB_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickDB_Tests.debug.xcconfig"; path = "Target Support Files/Pods-QuickDB_Tests/Pods-QuickDB_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -69,6 +75,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13AE82462450D41D00BE5FF5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				13AE82472450D42C00BE5FF5 /* MyModel.swift */,
+				13AE82492450D43D00BE5FF5 /* ImageModel.swift */,
+				13AE824B2450D44B00BE5FF5 /* UserModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		148B9B194AEF4C04FA4453DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +129,7 @@
 		607FACD21AFB9204008FA782 /* Example for QuickDB */ = {
 			isa = PBXGroup;
 			children = (
+				13AE82462450D41D00BE5FF5 /* Models */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -332,7 +349,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				13AE82482450D42C00BE5FF5 /* MyModel.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				13AE824C2450D44B00BE5FF5 /* UserModel.swift in Sources */,
+				13AE824A2450D43D00BE5FF5 /* ImageModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
