@@ -31,11 +31,11 @@ public final class QuickDB {
 			}
 		}
 	}
-	public func getAll<T: Decodable>(TagsMatchedWithItems tags: [String]? = nil,LatestObjects response: ([T]) -> Void, error: (Error) -> Void) {
+	public func getAll<T: Decodable>(CachesMatchedWithItems caches: [String]? = nil,LatestObjects response: ([T]) -> Void, error: (Error) -> Void) {
 		
 		let predicate: NSPredicate
-		if let safeTags = tags{
-			predicate = NSPredicate(format: "modelName == %@ && ANY tags IN %@", String(describing: T.self), safeTags)
+		if let safeCaches = caches{
+			predicate = NSPredicate(format: "modelName == %@ && ANY tags IN %@", String(describing: T.self), safeCaches)
 		}else {
 			predicate = NSPredicate(format: "modelName == %@", String(describing: T.self))
 		}
