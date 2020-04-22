@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QuickDB'
-  s.version          = '0.1.0'
-  s.summary          = 'A generic coreData component to store any codable classes in a sigle line of code without any changes'
+  s.version          = '1.0.0'
+  s.summary          = 'Fast usage dataBase to avoid struggling with dataBase complexity. Just save every object with a simple function.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-'Fastest development dataBase ever! use quickDB in short scale projects'
+'The QuickDB uses CoreData with a SUPER easy use case that you can store any codable objects and query for them in just 1 line of code.\nThis component is highly recommended for small scale applications to store user data and settings with custom class types.'
                        DESC
 
   s.homepage         = 'https://github.com/behrad-kzm/QuickDB'
@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '11.0'
 
-  s.source_files = 'Classes/**/*'
+  s.source_files = 'QuickDB/Classes/**/*'
   
   # s.resource_bundles = {
   #   'QuickDB' => ['QuickDB/Assets/*.png']

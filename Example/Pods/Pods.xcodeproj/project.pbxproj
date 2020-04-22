@@ -140,6 +140,7 @@
 				13AE820E24507EE000BE5FF5 /* QuickIndexable.swift */,
 			);
 			name = Classes;
+			path = QuickDB/Classes;
 			sourceTree = "<group>";
 		};
 		26CC8BC0B610BD51955967F7A9B1B5F8 /* Pods-QuickDB_Example */ = {
