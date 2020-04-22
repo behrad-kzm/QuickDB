@@ -1,0 +1,16 @@
+PODS:
+  - QuickDB (0.1.0)
+
+DEPENDENCIES:
+  - QuickDB (from `../`)
+
+EXTERNAL SOURCES:
+  QuickDB:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  QuickDB: ab4f024862baa83276bd9b9eabe2a723663f3dd1
+
+PODFILE CHECKSUM: 12edd3bef90d00bac27ce4cf5a752222658a83ca
+
+COCOAPODS: 1.9.1

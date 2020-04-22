@@ -1,0 +1,6 @@
+framework module QuickDB {
+  umbrella header "QuickDB-umbrella.h"
+
+  export *
+  module * { export * }
+}

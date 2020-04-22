@@ -1,0 +1,6 @@
+framework module Pods_QuickDB_Example {
+  umbrella header "Pods-QuickDB_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
