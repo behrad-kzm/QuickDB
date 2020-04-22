@@ -31,11 +31,11 @@ public final class QuickDB {
 			}
 		}
 	}
-	public func getAll<T: Decodable>(CachesMatchedWithItems caches: [String]? = nil,LatestObjects response: ([T]) -> Void, error: (Error) -> Void) {
+	public func getAll<T: Decodable>(TagsMatchedWithItems tags: [String]? = nil,LatestObjects response: ([T]) -> Void, error: (Error) -> Void) {
 		
 		let predicate: NSPredicate
-		if let safeCaches = caches{
-			predicate = NSPredicate(format: "modelName == %@ && ANY tags IN %@", String(describing: T.self), safeCaches)
+		if let safeTags = tags{
+			predicate = NSPredicate(format: "modelName == %@ && ANY tags IN %@", String(describing: T.self), safeTags)
 		}else {
 			predicate = NSPredicate(format: "modelName == %@", String(describing: T.self))
 		}
@@ -50,7 +50,7 @@ public final class QuickDB {
 		}
 	}
 	
-	public func delete(ItemIds ids: [String], completion: ((Bool) -> Void)? = nil) {
+	public func delete(ItemIds ids: [UUID], completion: ((Bool) -> Void)? = nil) {
 		let predicate = NSPredicate(format: "ANY id IN %@", ids)
 		genericDB.batchDelete(predicate: predicate) { (updated) in
 			if completion != nil {
@@ -67,8 +67,8 @@ public final class QuickDB {
 			}
 		}
 	}
-	public func update(tags: String, forId id: String, completion: ((Bool) -> Void)? = nil, error: ((Error) -> Void)? = nil) {
-		let predicate = NSPredicate(format: "id == %@", id)
+	public func update(tags: String, forId id: UUID, completion: ((Bool) -> Void)? = nil, error: ((Error) -> Void)? = nil) {
+		let predicate = NSPredicate(format: "id == %@", id as CVarArg)
 
 		genericDB.getAll(predicate: predicate) {[completion, error, unowned self] (result) in
 			switch result {

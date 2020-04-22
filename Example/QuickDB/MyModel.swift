@@ -7,4 +7,11 @@
 //
 
 import Foundation
+import QuickDB
 
+struct MyModel: QuickIndexable {
+	
+	let uid = UUID()
+	var name: String
+	let content: String
+}

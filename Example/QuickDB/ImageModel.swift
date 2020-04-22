@@ -7,3 +7,11 @@
 //
 
 import Foundation
+import QuickDB
+
+struct ImageModel: QuickIndexable {
+	
+	let uid = UUID()
+	let name: String
+	let data: Data
+}
