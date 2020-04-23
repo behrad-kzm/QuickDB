@@ -1,5 +1,7 @@
 # QuickDB
 
+❗️Save and Retrieve any "Codable" in JUST ONE line of code❗️
+
 Fast usage dataBase to avoid struggling with dataBase complexity. Just save every object with a simple function.
 
 <img src="https://github.com/behrad-kzm/BEKDesing/blob/master/Images/BEKHeader.png">
@@ -11,6 +13,47 @@ This component is highly recommended for small scale applications to store user 
 [![Version](https://img.shields.io/cocoapods/v/QuickDB.svg?style=flat)](https://cocoapods.org/pods/QuickDB)
 [![License](https://img.shields.io/cocoapods/l/QuickDB.svg?style=flat)](https://cocoapods.org/pods/QuickDB)
 [![Platform](https://img.shields.io/cocoapods/p/QuickDB.svg?style=flat)](https://cocoapods.org/pods/QuickDB)
+
+## HOW?
+
+__Step 1:__
+
+Confirm your codable to have a UUID with protocol `QuickIndexable`
+
+```swift
+struct MyModel: QuickIndexable {
+  let uid = UUID()
+  ...
+}
+```
+
+__Step 2:__
+
+Save your object to QuickDB
+
+```swift
+  QuickDB.shared.insert(model: myModel)
+```
+
+__Step 3:__
+
+Retrieve all your objects from QuickDB
+
+```swift
+  		QuickDB.shared.getAll(LatestObjects: { (items: [MyModel]) in
+      
+      //use your inserted items here
+			print(items)
+		}) { (error) in
+			print(error)
+		}
+```
+
+QuickDB uses generic functions to query all records that matches with your Model type.self
+
+## Note
+
+Check the example to see how you can `delete`, `update` and `tag` your models.
 
 ## Example
 
