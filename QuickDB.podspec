@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '11.0'
 
-  s.source_files = 'Classes/**/*'
+  s.source_files = 'QuickDB/Classes/**/*'
   
   # s.resource_bundles = {
   #   'QuickDB' => ['QuickDB/Assets/*.png']
