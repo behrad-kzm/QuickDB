@@ -50,7 +50,7 @@ public class SJParentValueTransformer<T: NSCoding & NSObject>: ValueTransformer 
              ofClass: T.self,
              from: data as Data
          )
-         return result
+         return result as Any
     }
        /// The name of this transformer. This is the name used to register the transformer usin "`ValueTransformer.setValueTransformer(_:forName:)"
      public static var transformerName: NSValueTransformerName {
