@@ -1,5 +1,5 @@
 //
-//  UserModel.swift
+//  ImageModel.swift
 //  QuickDB_Example
 //
 //  Created by Behrad Kazemi on 4/23/20.
@@ -7,3 +7,11 @@
 //
 
 import Foundation
+import QuickDB
+
+struct ImageModel: QuickIndexable {
+	
+	let uid = UUID()
+	let name: String
+	let data: Data
+}

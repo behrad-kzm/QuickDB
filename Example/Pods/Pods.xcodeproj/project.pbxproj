@@ -17,6 +17,7 @@
 		13AE822824507EE100BE5FF5 /* DataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 13AE821224507EE000BE5FF5 /* DataBase.xcdatamodeld */; };
 		13AE822924507EE100BE5FF5 /* GenericModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE821424507EE000BE5FF5 /* GenericModel+CoreDataProperties.swift */; };
 		13AE822A24507EE100BE5FF5 /* GenericModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE822124507EE000BE5FF5 /* GenericModel+CoreDataClass.swift */; };
+		13CA1F632451C14E0046A317 /* CoreDataErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CA1F612451C0E30046A317 /* CoreDataErrors.swift */; };
 		2500861650BF26CB97DDCF6FCD3769B2 /* Pods-QuickDB_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A50A3CF29A412D93BD0E167D9B42A30 /* Pods-QuickDB_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3BBC46CB445245B161DC155A8CCC667D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		50342DC1C17720EDCE6AFD6E6F2FE0D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
@@ -59,6 +60,7 @@
 		13AE821324507EE000BE5FF5 /* DataBase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataBase.xcdatamodel; sourceTree = "<group>"; };
 		13AE821424507EE000BE5FF5 /* GenericModel+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GenericModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		13AE822124507EE000BE5FF5 /* GenericModel+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GenericModel+CoreDataClass.swift"; sourceTree = "<group>"; };
+		13CA1F612451C0E30046A317 /* CoreDataErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataErrors.swift; sourceTree = "<group>"; };
 		1F60272265348120650F43011F58679E /* QuickDB-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "QuickDB-Info.plist"; sourceTree = "<group>"; };
 		28AE335D2B24D02347B21A644793C801 /* Pods-QuickDB_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-QuickDB_Example.modulemap"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -138,6 +140,7 @@
 				13AE820D24507EE000BE5FF5 /* GenericModel+Decodable.swift */,
 				13AE820C24507EDF00BE5FF5 /* QuickDB.swift */,
 				13AE820E24507EE000BE5FF5 /* QuickIndexable.swift */,
+				13CA1F612451C0E30046A317 /* CoreDataErrors.swift */,
 			);
 			name = Classes;
 			path = QuickDB/Classes;
@@ -351,6 +354,9 @@
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
 				TargetAttributes = {
+					BB51D10B32CF2B211ADA8F6EABFE9AF9 = {
+						LastSwiftMigration = 1130;
+					};
 					C40E3A4D391DCA51D6F4E3474837C6DA = {
 						LastSwiftMigration = 1130;
 					};
@@ -422,6 +428,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13AE822924507EE100BE5FF5 /* GenericModel+CoreDataProperties.swift in Sources */,
+				13CA1F632451C14E0046A317 /* CoreDataErrors.swift in Sources */,
 				13AE822724507EE100BE5FF5 /* CoreDataStack.swift in Sources */,
 				13AE822424507EE100BE5FF5 /* QuickIndexable.swift in Sources */,
 				13AE822824507EE100BE5FF5 /* DataBase.xcdatamodeld in Sources */,
@@ -457,6 +464,7 @@
 			baseConfigurationReference = 5CE400D441F72EA534F2D960DA07F580 /* Pods-QuickDB_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -479,6 +487,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -490,6 +500,7 @@
 			baseConfigurationReference = F02A6F35E76D401E10B9E9346D4552AF /* Pods-QuickDB_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -512,6 +523,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -545,7 +557,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -580,7 +592,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -668,7 +680,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -730,7 +742,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;

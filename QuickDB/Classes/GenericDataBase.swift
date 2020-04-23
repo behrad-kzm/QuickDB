@@ -121,12 +121,5 @@ struct GenericDataBase<T: NSManagedObject> {
   }
   
 }
-public enum CoreDataError: Error {
-  case updateError
-  case addError
-  case deleteError
-  case isEmpty
-  case getError
-  case unknown
-}
+
 

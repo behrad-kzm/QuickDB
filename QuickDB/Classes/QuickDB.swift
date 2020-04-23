@@ -12,31 +12,50 @@ public final class QuickDB {
 	
 	public static let shared = QuickDB()
 	private(set) lazy var genericDB = GenericDataBase<GenericModel>()
-	public func store<T: QuickIndexable>(model: T, completion: ((Bool) -> Void)? = nil) throws {
+	public func insert<T: QuickIndexable>(model: T, completion: ((Bool) -> Void)? = nil) {
 		
 		let genericData = NSEntityDescription.insertNewObject(forEntityName: "GenericModel", into: genericDB.coreDataStack.context) as! GenericModel
-		do {
-			let objectData  = try JSONEncoder().encode(model)
+
+			let objectData  = try! JSONEncoder().encode(model)
 			genericData.setValue(String(describing: T.self), forKey: "modelName")
 			genericData.setValue(model.uid, forKey: "id")
 			genericData.setValue(objectData, forKey: "data")
 			genericData.setValue("", forKey: "tags")
 			genericData.setValue(Date(), forKey: "creationDate")
-		} catch let error {
-			throw error
-		}
 		genericDB.update(genericData) {[completion] (completed) in
 			if completion != nil {
 				completion!(completed)
 			}
 		}
 	}
+	
+	public func update<T: QuickIndexable>(model: T, completion: ((Bool) -> Void)? = nil, error: (Error) -> Void) {
+		let predicate = NSPredicate(format: "id == %@", model.uid as CVarArg)
+		
+		genericDB.getAll(predicate: predicate) { [unowned self](result) in
+			switch result {
+			case .success(let resp):
+				if let safeItem = resp.first {
+					let objectData  = try! JSONEncoder().encode(model)
+					safeItem.setValue(objectData, forKey: "data")
+					self.genericDB.update(safeItem) { (updated) in
+						completion?(updated)
+					}
+					return
+				}
+				error(CoreDataError.isEmpty)
+			case .failure(let err):
+				error(err)
+			}
+		}
+	}
+	
 	public func getAll<T: Decodable>(TagsMatchedWithItems tags: [String]? = nil,LatestObjects response: ([T]) -> Void, error: (Error) -> Void) {
 		
 		let predicate: NSPredicate
 		if let safeTags = tags{
 			predicate = NSPredicate(format: "modelName == %@ && ANY tags IN %@", String(describing: T.self), safeTags)
-		}else {
+		} else {
 			predicate = NSPredicate(format: "modelName == %@", String(describing: T.self))
 		}
 		let sdSortDate = NSSortDescriptor.init(key: "creationDate", ascending: false)
@@ -44,6 +63,25 @@ public final class QuickDB {
 			switch result {
 			case .success(let resp):
 				response(resp.compactMap {$0.translate()})
+			case .failure(let err):
+				error(err)
+			}
+		}
+	}
+	
+	public func get<T: Decodable>(ItemWithId itemId: UUID, response: (T) -> Void, error: (Error) -> Void) {
+		let predicate = NSPredicate(format: "id == %@", itemId as CVarArg)
+		
+		genericDB.getAll(predicate: predicate) { [response, error] (result) in
+			switch result {
+			case .success(let resp):
+				if let safeItem: T = resp.compactMap({ (res) -> T? in
+					res.translate()
+				}).first {
+					response(safeItem)
+					return
+				}
+				error(CoreDataError.isEmpty)
 			case .failure(let err):
 				error(err)
 			}
@@ -69,7 +107,7 @@ public final class QuickDB {
 	}
 	public func update(tags: String, forId id: UUID, completion: ((Bool) -> Void)? = nil, error: ((Error) -> Void)? = nil) {
 		let predicate = NSPredicate(format: "id == %@", id as CVarArg)
-
+		
 		genericDB.getAll(predicate: predicate) {[completion, error, unowned self] (result) in
 			switch result {
 			case .success(let matchedItems):
