@@ -40,13 +40,12 @@ __Step 3:__
 Retrieve all your objects from QuickDB
 
 ```swift
-  		QuickDB.shared.getAll(LatestObjects: { (items: [MyModel]) in
-      
+QuickDB.shared.getAll(LatestObjects: { (items: [MyModel]) in
       //use your inserted items here
-			print(items)
-		}) { (error) in
-			print(error)
-		}
+	print(items)
+}) { (error) in
+	print(error)
+}
 ```
 
 QuickDB uses generic functions to query all records that matches with your Model type.self
