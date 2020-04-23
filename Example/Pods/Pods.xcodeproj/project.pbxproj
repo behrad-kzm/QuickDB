@@ -479,6 +479,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 1.0.1;
 				MODULEMAP_FILE = "Target Support Files/Pods-QuickDB_Example/Pods-QuickDB_Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -515,6 +516,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 1.0.1;
 				MODULEMAP_FILE = "Target Support Files/Pods-QuickDB_Example/Pods-QuickDB_Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -550,7 +552,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				MODULEMAP_FILE = "Target Support Files/QuickDB/QuickDB.modulemap";
 				PRODUCT_MODULE_NAME = QuickDB;
 				PRODUCT_NAME = QuickDB;
@@ -584,7 +586,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				MODULEMAP_FILE = "Target Support Files/QuickDB/QuickDB.modulemap";
 				PRODUCT_MODULE_NAME = QuickDB;
 				PRODUCT_NAME = QuickDB;
@@ -618,6 +620,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 1.0.1;
 				MODULEMAP_FILE = "Target Support Files/Pods-QuickDB_Tests/Pods-QuickDB_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -774,6 +777,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 1.0.1;
 				MODULEMAP_FILE = "Target Support Files/Pods-QuickDB_Tests/Pods-QuickDB_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";

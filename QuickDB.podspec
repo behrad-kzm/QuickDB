@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QuickDB'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'Fast usage dataBase to avoid struggling with dataBase complexity. Just save every object with a simple function.'
 
 # This description is used to generate tags and improve search results.
@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '11.0'
 
-  s.source_files = 'QuickDB/Classes/**/*'
+  s.source_files = 'Classes/**/*'
   
   # s.resource_bundles = {
   #   'QuickDB' => ['QuickDB/Assets/*.png']
