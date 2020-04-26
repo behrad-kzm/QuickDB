@@ -9,10 +9,11 @@
 import CoreData
 
 struct GenericDataBase<T: NSManagedObject> {
-	let coreDataStack = CoreDataStack()
+  
+  let coreDataStack = CoreDataStack()
   func deleteAllRecords() {
     let entityName = String(describing: T.self)
-		let coord = coreDataStack.context.persistentStoreCoordinator
+    let coord = coreDataStack.context.persistentStoreCoordinator
     let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
     let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
     
@@ -34,7 +35,7 @@ struct GenericDataBase<T: NSManagedObject> {
     self.items = items
   }
   
-  func save(duty: CoreDataError, completion: (Result<Bool, CoreDataError>)->()) {
+  private func save(duty: CoreDataError, completion: (Result<Bool, CoreDataError>)->()) {
     do {
       try coreDataStack.context.save()
       completion(.success(true))
@@ -67,7 +68,7 @@ struct GenericDataBase<T: NSManagedObject> {
     
     fetchRequest.predicate = predicate
     let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-
+    
     do {
       try coreDataStack.context.execute(deleteRequest)
       completion(true)
@@ -76,6 +77,19 @@ struct GenericDataBase<T: NSManagedObject> {
       completion(false)
     }
   }
+  
+  @available(iOS 13.0, *)
+  func batchInsert(object: [[String : Any]], completion: (Bool)->()) {
+    let insertRequest = NSBatchInsertRequest(entityName: String(describing: T.self), objects: object)
+    do {
+      try coreDataStack.context.execute(insertRequest)
+      completion(true)
+    } catch let error {
+      print("error on batch inserting items with error: \(error)")
+      completion(false)
+    }
+  }
+  
   mutating func delete(_ item: T, completion: (Bool)->()) {
     if let index = items.firstIndex(of: item) {
       items.remove(at: index)
@@ -119,7 +133,6 @@ struct GenericDataBase<T: NSManagedObject> {
       }
     }
   }
-  
 }
 
 
