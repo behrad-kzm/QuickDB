@@ -53,6 +53,7 @@ QuickDB uses generic functions to query all records that matches with your Model
 ## Note
 
 💢Check the example to see how you can `bachInsert`, `delete`, `update` and `tag` your models.
+
 💢There are usecases that optimized for storing large files like `Image`, `Audio`, etc. 
 
 ## Example
