@@ -7,12 +7,19 @@
 //
 
 import Foundation
+import FileProvider
 import CoreData
 public final class QuickDB {
 	
 	public static let shared = QuickDB()
+	public let fileManager = QuickFM()
+	
+	public static var documentPath: URL? {
+		return QuickFM.documentPath
+	}
+	
 	private(set) lazy var genericDB = GenericDataBase<GenericModel>()
-	public func insert<T: QuickIndexable>(model: T, completion: ((Bool) -> Void)? = nil) {
+	public func insert<T: QuickIndexable>(model: T, withTag tag: String = "", completion: ((Bool) -> Void)? = nil) {
 		
 		let genericData = NSEntityDescription.insertNewObject(forEntityName: "GenericModel", into: genericDB.coreDataStack.context) as! GenericModel
 
@@ -20,7 +27,7 @@ public final class QuickDB {
 			genericData.setValue(String(describing: T.self), forKey: "modelName")
 			genericData.setValue(model.uid, forKey: "id")
 			genericData.setValue(objectData, forKey: "data")
-			genericData.setValue("", forKey: "tags")
+			genericData.setValue(tag, forKey: "tags")
 			genericData.setValue(Date(), forKey: "creationDate")
 		genericDB.update(genericData) {[completion] (completed) in
 			if completion != nil {
@@ -125,5 +132,6 @@ public final class QuickDB {
 	
 	public func resetFactory() {
 		genericDB.deleteAllRecords()
+		fileManager.resetFactory()
 	}
 }

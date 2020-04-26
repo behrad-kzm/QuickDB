@@ -81,7 +81,7 @@ class Tests: XCTestCase {
 	}
 	
 	//MARK: - Testing duration with complex models
-	func testInsertComplexModels(){
+	func testInsertComplexModelsPerformance(){
 		
 		/////
     let expectation = XCTestExpectation(description: "Inserting Complex models")

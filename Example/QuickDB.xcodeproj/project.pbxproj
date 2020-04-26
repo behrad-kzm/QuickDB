@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		01A0AEE507C9C7B9C15586F9 /* Pods_QuickDB_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E878D2AE2CE42F8F7EC08C94 /* Pods_QuickDB_Tests.framework */; };
+		13496CC02455CB6A00F34C24 /* TestQuickData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13496CBF2455CB6A00F34C24 /* TestQuickData.swift */; };
 		13AE82482450D42C00BE5FF5 /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE82472450D42C00BE5FF5 /* MyModel.swift */; };
 		13AE824A2450D43D00BE5FF5 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE82492450D43D00BE5FF5 /* ImageModel.swift */; };
 		13CA1F5F2451A15A0046A317 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CA1F5E2451A15A0046A317 /* ImageModel.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		0DA24571446657A6032EAA82 /* Pods-QuickDB_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickDB_Example.release.xcconfig"; path = "Target Support Files/Pods-QuickDB_Example/Pods-QuickDB_Example.release.xcconfig"; sourceTree = "<group>"; };
+		13496CBF2455CB6A00F34C24 /* TestQuickData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestQuickData.swift; sourceTree = "<group>"; };
 		13AE82472450D42C00BE5FF5 /* MyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyModel.swift; sourceTree = "<group>"; };
 		13AE82492450D43D00BE5FF5 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		13CA1F5D2451A15A0046A317 /* SimpleCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCodable.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				13496CBF2455CB6A00F34C24 /* TestQuickData.swift */,
 				13CA1F642454CE3B0046A317 /* ComplexModel.swift */,
 				13CA1F5D2451A15A0046A317 /* SimpleCodable.swift */,
 				13CA1F5E2451A15A0046A317 /* ImageModel.swift */,
@@ -370,6 +373,7 @@
 				13CA1F602451A15A0046A317 /* SimpleCodable.swift in Sources */,
 				13CA1F662454D01B0046A317 /* ComplexModel.swift in Sources */,
 				13CA1F5F2451A15A0046A317 /* ImageModel.swift in Sources */,
+				13496CC02455CB6A00F34C24 /* TestQuickData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
