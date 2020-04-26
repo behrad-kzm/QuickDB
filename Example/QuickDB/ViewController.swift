@@ -42,7 +42,7 @@ class ViewController: UIViewController {
 //MARK: - Working with image
 extension ViewController {
 	func insertImageModels(){
-		if let image = UIImage(named: "Image"), let data = UIImagePNGRepresentation(image){
+    if let image = UIImage(named: "Image"), let data = image.pngData(){
 			(1...1000).forEach { (index) in
 				let imageModel = ImageModel(name: "Image\(index)", data: data)
 				QuickDB.shared.insert(model: imageModel)

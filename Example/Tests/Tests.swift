@@ -85,7 +85,7 @@ class Tests: XCTestCase {
 	
 	
 	func insertImageModels(byCount count: Int){
-		if let image = UIImage(named: "Image"), let data = UIImagePNGRepresentation(image){
+    if let image = UIImage(named: "Image"), let data = image.pngData(){
 			(1...count).forEach { (index) in
 				let imageModel = ImageModel(name: "Image\(index)", data: data)
 				QuickDB.shared.insert(model: imageModel)
