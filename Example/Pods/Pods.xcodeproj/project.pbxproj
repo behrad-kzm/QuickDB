@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		076F4328E1478671088C2DC502E03E4E /* Pods-QuickDB_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B50E68C51B722EC48C0A5C6D995634 /* Pods-QuickDB_Example-dummy.m */; };
+		130FB18624576D9F0035BF92 /* MimeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130FB18324576D990035BF92 /* MimeType.swift */; };
+		130FB18724576DA10035BF92 /* Swime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130FB18224576D990035BF92 /* Swime.swift */; };
 		132C4EAE2455D1EB001C4C73 /* Data+QuickFileConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132C4EAC2455D1E7001C4C73 /* Data+QuickFileConvertable.swift */; };
-		132C4EB12455D529001C4C73 /* MimeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132C4EAF2455D528001C4C73 /* MimeType.swift */; };
-		132C4EB22455D529001C4C73 /* Swime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132C4EB02455D528001C4C73 /* Swime.swift */; };
 		132C4EB42455DF7F001C4C73 /* QuickDataFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132C4EB32455DF7F001C4C73 /* QuickDataFile.swift */; };
 		13496CC62455CD9F00F34C24 /* QuickDataRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13496CC42455CD9C00F34C24 /* QuickDataRecord.swift */; };
 		13496CCB2455CFEB00F34C24 /* QuickFileConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13496CCA2455CFEB00F34C24 /* QuickFileConvertable.swift */; };
@@ -60,9 +60,9 @@
 		0A1F6B5E1956295043FD318908696E1C /* Pods-QuickDB_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-QuickDB_Tests.modulemap"; sourceTree = "<group>"; };
 		0BC6BE737C6C8F2013D6C35DD5203F18 /* Pods-QuickDB_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-QuickDB_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		0CFA00E1B433AB757F8CA050613E3F69 /* QuickDB.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = QuickDB.modulemap; sourceTree = "<group>"; };
+		130FB18224576D990035BF92 /* Swime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swime.swift; sourceTree = "<group>"; };
+		130FB18324576D990035BF92 /* MimeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MimeType.swift; sourceTree = "<group>"; };
 		132C4EAC2455D1E7001C4C73 /* Data+QuickFileConvertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+QuickFileConvertable.swift"; sourceTree = "<group>"; };
-		132C4EAF2455D528001C4C73 /* MimeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MimeType.swift; path = "../../../../../../../Downloads/Swime-master/Sources/MimeType.swift"; sourceTree = "<group>"; };
-		132C4EB02455D528001C4C73 /* Swime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Swime.swift; path = "../../../../../../../Downloads/Swime-master/Sources/Swime.swift"; sourceTree = "<group>"; };
 		132C4EB32455DF7F001C4C73 /* QuickDataFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickDataFile.swift; sourceTree = "<group>"; };
 		13496CC42455CD9C00F34C24 /* QuickDataRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickDataRecord.swift; sourceTree = "<group>"; };
 		13496CCA2455CFEB00F34C24 /* QuickFileConvertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickFileConvertable.swift; sourceTree = "<group>"; };
@@ -159,8 +159,8 @@
 		134D8D352455C5DE00E3453D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				132C4EAF2455D528001C4C73 /* MimeType.swift */,
-				132C4EB02455D528001C4C73 /* Swime.swift */,
+				130FB18324576D990035BF92 /* MimeType.swift */,
+				130FB18224576D990035BF92 /* Swime.swift */,
 				13AE821124507EE000BE5FF5 /* CoreDataStack.swift */,
 				13AE821024507EE000BE5FF5 /* CoreUtils.swift */,
 				13AE821224507EE000BE5FF5 /* DataBase.xcdatamodeld */,
@@ -489,7 +489,7 @@
 				13AE822924507EE100BE5FF5 /* GenericModel+CoreDataProperties.swift in Sources */,
 				132C4EAE2455D1EB001C4C73 /* Data+QuickFileConvertable.swift in Sources */,
 				13CA1F632451C14E0046A317 /* CoreDataErrors.swift in Sources */,
-				132C4EB22455D529001C4C73 /* Swime.swift in Sources */,
+				130FB18724576DA10035BF92 /* Swime.swift in Sources */,
 				13AE822724507EE100BE5FF5 /* CoreDataStack.swift in Sources */,
 				132C4EB42455DF7F001C4C73 /* QuickDataFile.swift in Sources */,
 				13AE822424507EE100BE5FF5 /* QuickIndexable.swift in Sources */,
@@ -498,8 +498,8 @@
 				B416E073FCFFC5E1694C72AAB7772543 /* QuickDB-dummy.m in Sources */,
 				134D8D302455C37E00E3453D /* QuickData+Extensions.swift in Sources */,
 				13AE822524507EE100BE5FF5 /* GenericDataBase.swift in Sources */,
+				130FB18624576D9F0035BF92 /* MimeType.swift in Sources */,
 				13AE822224507EE100BE5FF5 /* QuickDB.swift in Sources */,
-				132C4EB12455D529001C4C73 /* MimeType.swift in Sources */,
 				13AE822624507EE100BE5FF5 /* CoreUtils.swift in Sources */,
 				134D8D332455C54800E3453D /* QuickFM.swift in Sources */,
 				13496CCB2455CFEB00F34C24 /* QuickFileConvertable.swift in Sources */,
