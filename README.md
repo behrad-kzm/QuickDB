@@ -8,6 +8,8 @@ Fast usage dataBase to avoid struggling with dataBase complexity. Just save ever
 
 <img src="https://github.com/behrad-kzm/BEKDesing/blob/master/Images/BEKHeader.png">
 
+Other languages: ([中文](/README-CH.md))
+
 The QuickDB uses CoreData with a SUPER easy use case that you can store any codable objects and query for them in just 1 line of code.
 This component is highly recommended for small scale applications to store user data and settings with custom class types.
 
