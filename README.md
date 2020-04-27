@@ -1,6 +1,8 @@
 # QuickDB
 
-❗️Save and Retrieve any "Codable" in JUST ONE line of code❗️
+### FileManager + CoreData
+
+❗️Save and Retrieve any thing in JUST ONE line of code❗️
 
 Fast usage dataBase to avoid struggling with dataBase complexity. Just save every object with a simple function.
 
@@ -52,9 +54,39 @@ QuickDB uses generic functions to query all records that matches with your Model
 
 ## Note
 
-💢Check the example to see how you can `bachInsert`, `delete`, `update` and `tag` your models.
+💢 Check the example to see how you can `bachInsert`, `delete`, `update` and `tag` your models.
 
-💢There are usecases that optimized for storing large files like `Image`, `Audio`, etc. 
+💢 There are usecases that optimized for storing large files like `Image`, `Audio`, etc. 
+
+__Store An Image:__
+
+```swift
+	UIImage(imageLiteralResourceName: "Image").pngData()?.asQuickFile(fileName: "MyImage").store()
+```
+
+### You can convert any Data models to quickFile and store it in the FileManager:
+
+__Step 1:__
+
+Save your Data object:
+
+```swift
+	Data().asQuickFile(fileName: "MyData").store()
+```
+
+__Step 2:__
+
+Load your saved Data:
+
+```swift
+QuickDB.shared.data(fileName: "MyImage", fileType: .png) { (items) in
+	//items is an array of [Data] matches with your file name
+}
+```
+
+💢 QuickFM save any files in the QuickDBStorage folder inside your device, you can get all saved files inside the function of  `QuickDB.shared.getAll(LatestObjects: { (items: [QuickDataRecord]) in}`.
+
+💢 QuickFM allows you to save Data objects with same fileNames and retrieve all of them in `data(fileName:fileType:completion)`.
 
 ## Example
 
@@ -78,6 +110,10 @@ pod 'QuickDB'
 ## Author
 
 behrad-kzm, behradkzm@gmail.com
+
+## Special Thanks
+
+[Salar Soleimani](https://github.com/Salarsoleimani)
 
 ## License
 
