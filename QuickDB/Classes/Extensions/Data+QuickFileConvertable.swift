@@ -9,7 +9,7 @@ import Foundation
 
 extension Data: QuickFileConvertable{
 	public func asQuickFile(fileName: String) -> QuickDataFile {
-		let meme = Swime.mimeType(data: self)		
-		return QuickDataFile(fileName: fileName, pathExtension: meme?.ext ?? "data", data: self)
+		let mime = Swime.mimeType(data: self)
+		return QuickDataFile(fileName: fileName, pathExtension: mime?.ext ?? "data", data: self)
 	}
 }

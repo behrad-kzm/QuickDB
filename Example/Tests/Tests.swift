@@ -16,7 +16,24 @@ class Tests: XCTestCase {
 		QuickDB.shared.resetFactory()
 		codableObject = nil
 	}
-	
+	func testResetFactory(){
+		let quickData = UIImage(imageLiteralResourceName: "Image").pngData()?.asQuickFile(fileName: "MyImage")
+		quickData?.store()
+		if let dir = QuickFM.documentPath, let filePath = quickData?.combineFilePath(documentURL: dir).path {
+			let fileExist = FileManager.default.fileExists(atPath: filePath)
+			if !fileExist{
+				XCTAssert(false)
+			}
+		}
+		QuickDB.shared.resetFactory()
+		
+		if let files = try? FileManager.default.contentsOfDirectory(atPath: QuickFM.documentPath?.path ?? ""){
+			print(files)
+			XCTAssert(files.count == 0)
+			return
+		}
+		XCTAssert(false)
+	}
 	//MARK: - Test Updating Model
 	func testDeletingModel(){
 		QuickDB.shared.insert(model: codableObject)
@@ -86,7 +103,7 @@ class Tests: XCTestCase {
 		/////
     let expectation = XCTestExpectation(description: "Inserting Complex models")
     
-		let insertedModelsCount = 10 // 1000 recursive models
+		let insertedModelsCount = 10 // 10 recursive models
 		print("\n\nStart inserting \(insertedModelsCount) complexModels to database at the time of \(Date())")
 		insertComplexModels(byCount: insertedModelsCount)
 		
@@ -106,6 +123,10 @@ class Tests: XCTestCase {
 		XCTAssertEqual(retrievedModelsCount, insertedModelsCount, "We should have loaded exactly \(insertedModelsCount) stories.")
 		/////
 		
+	}
+	
+	func testExample() {
+		insertComplexModels(byCount: 10)
 	}
 	
 	func insertComplexModels(byCount count: Int){

@@ -11,8 +11,8 @@
 		132C4EAE2455D1EB001C4C73 /* Data+QuickFileConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132C4EAC2455D1E7001C4C73 /* Data+QuickFileConvertable.swift */; };
 		132C4EB12455D529001C4C73 /* MimeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132C4EAF2455D528001C4C73 /* MimeType.swift */; };
 		132C4EB22455D529001C4C73 /* Swime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132C4EB02455D528001C4C73 /* Swime.swift */; };
+		132C4EB42455DF7F001C4C73 /* QuickDataFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132C4EB32455DF7F001C4C73 /* QuickDataFile.swift */; };
 		13496CC62455CD9F00F34C24 /* QuickDataRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13496CC42455CD9C00F34C24 /* QuickDataRecord.swift */; };
-		13496CC82455CDE900F34C24 /* QuickDataFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13496CC72455CDE900F34C24 /* QuickDataFile.swift */; };
 		13496CCB2455CFEB00F34C24 /* QuickFileConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13496CCA2455CFEB00F34C24 /* QuickFileConvertable.swift */; };
 		134D8D2D245586A200E3453D /* QuickData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134D8D2B245585F700E3453D /* QuickData.swift */; };
 		134D8D302455C37E00E3453D /* QuickData+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134D8D2E2455C34D00E3453D /* QuickData+Extensions.swift */; };
@@ -63,8 +63,8 @@
 		132C4EAC2455D1E7001C4C73 /* Data+QuickFileConvertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+QuickFileConvertable.swift"; sourceTree = "<group>"; };
 		132C4EAF2455D528001C4C73 /* MimeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MimeType.swift; path = "../../../../../../../Downloads/Swime-master/Sources/MimeType.swift"; sourceTree = "<group>"; };
 		132C4EB02455D528001C4C73 /* Swime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Swime.swift; path = "../../../../../../../Downloads/Swime-master/Sources/Swime.swift"; sourceTree = "<group>"; };
+		132C4EB32455DF7F001C4C73 /* QuickDataFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickDataFile.swift; sourceTree = "<group>"; };
 		13496CC42455CD9C00F34C24 /* QuickDataRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickDataRecord.swift; sourceTree = "<group>"; };
-		13496CC72455CDE900F34C24 /* QuickDataFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickDataFile.swift; sourceTree = "<group>"; };
 		13496CCA2455CFEB00F34C24 /* QuickFileConvertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickFileConvertable.swift; sourceTree = "<group>"; };
 		134D8D2B245585F700E3453D /* QuickData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickData.swift; sourceTree = "<group>"; };
 		134D8D2E2455C34D00E3453D /* QuickData+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuickData+Extensions.swift"; sourceTree = "<group>"; };
@@ -148,10 +148,10 @@
 		134D8D342455C5C600E3453D /* QuickData */ = {
 			isa = PBXGroup;
 			children = (
+				132C4EB32455DF7F001C4C73 /* QuickDataFile.swift */,
 				134D8D2B245585F700E3453D /* QuickData.swift */,
 				134D8D2E2455C34D00E3453D /* QuickData+Extensions.swift */,
 				13496CC42455CD9C00F34C24 /* QuickDataRecord.swift */,
-				13496CC72455CDE900F34C24 /* QuickDataFile.swift */,
 			);
 			path = QuickData;
 			sourceTree = "<group>";
@@ -491,6 +491,7 @@
 				13CA1F632451C14E0046A317 /* CoreDataErrors.swift in Sources */,
 				132C4EB22455D529001C4C73 /* Swime.swift in Sources */,
 				13AE822724507EE100BE5FF5 /* CoreDataStack.swift in Sources */,
+				132C4EB42455DF7F001C4C73 /* QuickDataFile.swift in Sources */,
 				13AE822424507EE100BE5FF5 /* QuickIndexable.swift in Sources */,
 				13AE822824507EE100BE5FF5 /* DataBase.xcdatamodeld in Sources */,
 				13496CC62455CD9F00F34C24 /* QuickDataRecord.swift in Sources */,
@@ -503,7 +504,6 @@
 				134D8D332455C54800E3453D /* QuickFM.swift in Sources */,
 				13496CCB2455CFEB00F34C24 /* QuickFileConvertable.swift in Sources */,
 				134D8D2D245586A200E3453D /* QuickData.swift in Sources */,
-				13496CC82455CDE900F34C24 /* QuickDataFile.swift in Sources */,
 				13AE822A24507EE100BE5FF5 /* GenericModel+CoreDataClass.swift in Sources */,
 				13AE822324507EE100BE5FF5 /* GenericModel+Decodable.swift in Sources */,
 			);
@@ -547,7 +547,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 2.0.0;
 				MODULEMAP_FILE = "Target Support Files/Pods-QuickDB_Example/Pods-QuickDB_Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -584,7 +584,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 2.0.0;
 				MODULEMAP_FILE = "Target Support Files/Pods-QuickDB_Example/Pods-QuickDB_Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -620,7 +620,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 2.0.0;
 				MODULEMAP_FILE = "Target Support Files/QuickDB/QuickDB.modulemap";
 				PRODUCT_MODULE_NAME = QuickDB;
 				PRODUCT_NAME = QuickDB;
@@ -654,7 +654,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 2.0.0;
 				MODULEMAP_FILE = "Target Support Files/QuickDB/QuickDB.modulemap";
 				PRODUCT_MODULE_NAME = QuickDB;
 				PRODUCT_NAME = QuickDB;
@@ -688,7 +688,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 2.0.0;
 				MODULEMAP_FILE = "Target Support Files/Pods-QuickDB_Tests/Pods-QuickDB_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -845,7 +845,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 2.0.0;
 				MODULEMAP_FILE = "Target Support Files/Pods-QuickDB_Tests/Pods-QuickDB_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";

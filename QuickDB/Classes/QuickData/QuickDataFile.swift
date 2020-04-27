@@ -18,4 +18,7 @@ public struct QuickDataFile: QuickData {
 		self.pathExtension = pathExtension
 		self.data = data
 	}
+	func asRecord() -> QuickDataRecord{
+		return QuickDataRecord(uid: uid, fileName: fileName, pathExtension: pathExtension)
+	}
 }

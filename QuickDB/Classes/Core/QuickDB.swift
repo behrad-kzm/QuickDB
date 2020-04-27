@@ -76,6 +76,15 @@ public final class QuickDB {
 		}
 	}
 	
+	public func data(fileName: String, fileType: FileType, response: ([Data]?) -> Void){
+		getAll(TagsMatchedWithItems: [QuickDataRecord.makeTags(fileName: fileName, pathExtension: fileType.asMimeType())], LatestObjects: { (items: [QuickDataRecord]) in
+			let datas = items.compactMap{$0.data}
+			response(datas)
+		}) { (error) in
+			response(nil)
+		}
+	}
+	
 	public func get<T: Decodable>(ItemWithId itemId: UUID, response: (T) -> Void, error: (Error) -> Void) {
 		let predicate = NSPredicate(format: "id == %@", itemId as CVarArg)
 		
@@ -101,6 +110,15 @@ public final class QuickDB {
 			if completion != nil {
 				completion!(updated)
 			}
+		}
+	}
+
+	public func delete(fileName: String, fileType: FileType, completion: ((Bool) -> Void)? = nil) {
+		getAll(TagsMatchedWithItems: [QuickDataRecord.makeTags(fileName: fileName, pathExtension: fileType.asMimeType())], LatestObjects: { [delete](items: [QuickDataRecord]) in
+			let ids = items.compactMap{$0.uid}
+			delete(ids,completion)
+		}) { (error) in
+			completion?(false)
 		}
 	}
 	
@@ -131,7 +149,7 @@ public final class QuickDB {
 	}
 	
 	public func resetFactory() {
-		genericDB.deleteAllRecords()
 		fileManager.resetFactory()
+		genericDB.deleteAllRecords()
 	}
 }

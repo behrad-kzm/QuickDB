@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QuickDB'
-  s.version          = '1.0.2'
+  s.version          = '2.0.0'
   s.summary          = 'Fast usage dataBase to avoid struggling with dataBase complexity. Just save every object with a simple function.'
 
 # This description is used to generate tags and improve search results.

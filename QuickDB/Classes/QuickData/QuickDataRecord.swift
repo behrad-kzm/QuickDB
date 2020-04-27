@@ -13,8 +13,7 @@ public struct QuickDataRecord: QuickData {
 	public var pathExtension: String
 	public var data: Data? {
 		if let dir = QuickDB.documentPath{
-			let file = fileName + uid.uuidString + "." + pathExtension
-			let fileURL = dir.appendingPathComponent(file)
+			let fileURL = combineFilePath(documentURL: dir)
 			do {
 				return try Data(contentsOf: fileURL)
 			} catch let error{
