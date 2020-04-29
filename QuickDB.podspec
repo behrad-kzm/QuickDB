@@ -23,6 +23,11 @@ Pod::Spec.new do |s|
 
   s.homepage         = 'https://github.com/behrad-kzm/QuickDB'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  
+  s.source_files  = 'QuickDB/Classes/Utils/DataBase.xcdatamodeld', 'QuickDB/Classes/Utils/DataBase/*.xcdatamodeld', 'QuickDB/Classes/**/*.{h,m,swift,xcdatamodeld}'
+  s.resources = ['QuickDB/Classes/Utils/DataBase.xcdatamodeld']
+  s.preserve_paths = 'QuickDB/Classes/Utils/DataBase.xcdatamodeld'
+  
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'behrad-kzm' => 'behradkzm@gmail.com' }
   s.source           = { :git => 'https://github.com/behrad-kzm/QuickDB.git', :tag => s.version.to_s }
@@ -30,7 +35,6 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '11.0'
 	s.swift_versions = '5.0'
-  s.source_files = 'QuickDB/Classes/**/*.{h,m,swift,xcdatamodeld}'
   
   # s.resource_bundles = {
   #   'QuickDB' => ['QuickDB/Assets/*.png']
