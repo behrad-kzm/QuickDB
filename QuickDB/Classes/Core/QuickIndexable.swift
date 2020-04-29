@@ -7,6 +7,7 @@
 //
 
 import Foundation
-public protocol QuickIndexable: Codable {
+public protocol QuickIndexable: Codable, Equatable {
 	var uid: UUID { get }
 }
+

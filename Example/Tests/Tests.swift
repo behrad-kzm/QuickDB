@@ -96,6 +96,38 @@ class Tests: XCTestCase {
 		XCTAssertEqual(retrieveImagesCount, insertedImagesCount, "We should have loaded exactly \(insertedImagesCount) stories.")
 
 	}
+  //MARK: - Testing Get with page limit
+  func testGetFromCoredataWithLimit() {
+  
+    let insertedModelsCount = 10 // 10 recursive models
+    print("\n\nStart inserting \(insertedModelsCount) complexModels to database at the time of \(Date())")
+    insertComplexModels(byCount: insertedModelsCount)
+    
+    var pageIndex = 1
+    let pageLimit = 2
+    var shouldGet = true
+    var fullArrayItems = [ComplexModel]()
+    
+    repeat {
+      QuickDB.shared.getWithLimit(pageIndex, pageLimit: pageLimit, LatestObjects: { (items: [ComplexModel]) in
+        pageIndex += 1
+        if items.count == 0 {
+          shouldGet = false
+        }
+        for item in items {
+          fullArrayItems.append(item)
+        }
+      }) { (error) in
+        print(error)
+      }
+      
+    } while shouldGet
+    
+    XCTAssertEqual(fullArrayItems.count, 10)
+    XCTAssertNotEqual(fullArrayItems[2], fullArrayItems[4])
+    XCTAssertNotEqual(fullArrayItems[0], fullArrayItems[3])
+    
+  }
 	
 	//MARK: - Testing duration with complex models
 	func testInsertComplexModelsPerformance(){
@@ -129,7 +161,7 @@ class Tests: XCTestCase {
 		insertComplexModels(byCount: 10)
 	}
 	
-	func insertComplexModels(byCount count: Int){
+	func insertComplexModels(byCount count: Int) {
 		(1...count).forEach { (_) in
 			let complexModel = ComplexModel(innerItems: (1...count).compactMap{_ in InnerItem(leafs: (1...count).compactMap{_ in Leaf()})})
 			QuickDB.shared.insert(model: complexModel)

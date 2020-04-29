@@ -75,6 +75,33 @@ public final class QuickDB {
 			}
 		}
 	}
+  
+  /// get objects from coredata with limit.
+  ///
+  /// - Parameter pageLimit: limit quantity of each page.
+  /// - Parameter pageIndex: index of which page is showing result. pageIndex starts with 1.
+  /// - Parameter tags: tags matched with objects
+  /// - returns: array of T decodable object.
+  /// - Author: Salar Soleimani.
+  ///
+  public func getWithLimit<T: Decodable>(_ pageIndex: Int = 1, pageLimit: Int, tags: [String]? = nil, LatestObjects response: ([T]) -> Void, error: (Error) -> Void) {
+    let predicate: NSPredicate
+    if let safeTags = tags {
+      predicate = NSPredicate(format: "modelName == %@ && ANY tags IN %@", String(describing: T.self), safeTags)
+    } else {
+      predicate = NSPredicate(format: "modelName == %@", String(describing: T.self))
+    }
+    
+    let sdSortDate = NSSortDescriptor.init(key: "creationDate", ascending: false)
+    genericDB.getAll(predicate: predicate, sortDescriptor: sdSortDate, pageIndex: pageIndex, eachPage: pageLimit) { [response, error] (result) in
+      switch result {
+      case .success(let resp):
+        response(resp.compactMap {$0.translate()})
+      case .failure(let err):
+        error(err)
+      }
+    }
+  }
 	
 	public func data(fileName: String, fileType: FileType, response: ([Data]?) -> Void){
 		getAll(TagsMatchedWithItems: [QuickDataRecord.makeTags(fileName: fileName, pathExtension: fileType.asMimeType())], LatestObjects: { (items: [QuickDataRecord]) in

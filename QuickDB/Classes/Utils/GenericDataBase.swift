@@ -45,12 +45,18 @@ struct GenericDataBase<T: NSManagedObject> {
     }
   }
   
-  func getAll(predicate: NSPredicate?, sortDescriptor: NSSortDescriptor? = nil, completion: (Result<[T], CoreDataError>)->()) {
+  func getAll(predicate: NSPredicate?, sortDescriptor: NSSortDescriptor? = nil, pageIndex: Int? = nil, eachPage: Int? = nil, completion: (Result<[T], CoreDataError>)->()) {
     let fetchRequest = NSFetchRequest<T>(entityName: String(describing: T.self))
+    if let pageIndex = pageIndex, let eachPage = eachPage, pageIndex >= 1 {
+      fetchRequest.fetchOffset = pageIndex
+      fetchRequest.fetchLimit = eachPage
+    }
     fetchRequest.predicate = predicate
+    
     if let sort = sortDescriptor {
       fetchRequest.sortDescriptors = [sort]
     }
+    
     do {
       let list = try coreDataStack.context.fetch(fetchRequest)
       if list.isEmpty {
