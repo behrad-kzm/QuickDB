@@ -71,6 +71,10 @@ public final class QuickDB {
 			case .success(let resp):
 				response(resp.compactMap {$0.translate()})
 			case .failure(let err):
+        if err == .isEmpty {
+          response([T]())
+          return
+        }
 				error(err)
 			}
 		}
@@ -98,6 +102,10 @@ public final class QuickDB {
       case .success(let resp):
         response(resp.compactMap {$0.translate()})
       case .failure(let err):
+        if err == .isEmpty {
+          response([T]())
+          return
+        }
         error(err)
       }
     }
