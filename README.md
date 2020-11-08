@@ -26,7 +26,7 @@ Confirm your codable to have a UUID with protocol `QuickIndexable`
 
 ```swift
 struct MyModel: QuickIndexable {
-  let uid = UUID()
+  var uid = UUID()
   ...
 }
 ```
