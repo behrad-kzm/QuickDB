@@ -6,18 +6,20 @@
 //
 
 import Foundation
+
 public struct QuickFM {
 	
 	init() {
 		QuickFM.createDirectory()
 	}
+  
 	public static var documentPath: URL? {
 		let documentsPath = NSURL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])
 		return documentsPath.appendingPathComponent("QuickDBStorage")
 	}
 	
 	public func save(model: QuickDataFile, completion: ((Bool) -> Void)? = nil) {
-		if let dir = QuickFM.documentPath{
+		if let dir = QuickFM.documentPath {
 			let fileURL = model.combineFilePath(documentURL: dir)
 			do{
 				try model.data?.write(to: fileURL)
@@ -30,7 +32,7 @@ public struct QuickFM {
 	
 	public func remove(model: QuickDataRecord, completion: ((Bool) -> Void)? = nil) {
 		
-		if let dir = QuickFM.documentPath, FileManager.default.fileExists(atPath: model.combineFilePath(documentURL: dir).path){
+		if let dir = QuickFM.documentPath, FileManager.default.fileExists(atPath: model.combineFilePath(documentURL: dir).path) {
 			let removeFile = model.combineFilePath(documentURL: dir)
 			do{
 				try FileManager.default.removeItem(at: removeFile)
@@ -44,25 +46,39 @@ public struct QuickFM {
 		completion?(false)
 	}
 	
-	public func read(model: QuickDataRecord, completion: ((Bool) -> Void)? = nil) {
-		
-	}
+	public func read(model: QuickDataRecord, completion: ((Data?) -> Void)? = nil) {
+    if let dir = QuickFM.documentPath, FileManager.default.fileExists(atPath: model.combineFilePath(documentURL: dir).path) {
+      let file = model.combineFilePath(documentURL: dir)
+      do {
+        let data = try Data(contentsOf: file)
+        completion?(data)
+      } catch let err {
+        print("error on QuickFM reading file with error: \(err)")
+      }
+    } else {
+      completion?(nil)
+    }
+  }
 	
-	static func createDirectory(){
+	static func createDirectory() {
 		let logsPath = QuickFM.documentPath
 		do{
 		try FileManager.default.createDirectory(atPath: logsPath!.path, withIntermediateDirectories: true, attributes: nil)
-		}catch let error{
+		} catch let error {
 				print("QuickFM > CreateFolder > Error: \(error)")
 		}
 	}
 	
-	public func resetFactory(){
+	public func resetFactory() {
 		guard let url = QuickFM.documentPath else {
-			return
-		}
-		
-		try! FileManager.default.removeItem(atPath: url.path)
+      print("error on QuickFM resetting factory, no document path")
+      return
+    }
+    do {
+      try FileManager.default.removeItem(atPath: url.path)
+    } catch let err {
+      print("error on QuickFM resetting factory with error: \(err)")
+    }
 		QuickFM.createDirectory()
 	}
 }
