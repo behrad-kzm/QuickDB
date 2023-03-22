@@ -1,0 +1,4 @@
+module QuickDB {
+    header "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/x86_64-apple-macosx/debug/QuickDB.build/QuickDB-Swift.h"
+    requires objc
+}
