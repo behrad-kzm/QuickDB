@@ -1,0 +1,32 @@
+---
+path:            '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/13.3/Combine.swiftmodule/arm64e-apple-macos.swiftmodule'
+dependencies:
+  - mtime:           1679630438000000000
+    path:            '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/13.3/Combine.swiftmodule/arm64e-apple-macos.swiftmodule'
+    size:            441276
+  - mtime:           1677957489000000000
+    path:            'usr/lib/swift/Swift.swiftmodule/arm64e-apple-macos.swiftinterface'
+    size:            2053440
+    sdk_relative:    true
+  - mtime:           1677945963000000000
+    path:            'usr/include/Darwin.apinotes'
+    size:            1133
+    sdk_relative:    true
+  - mtime:           1677960639000000000
+    path:            'usr/lib/swift/Darwin.swiftmodule/arm64e-apple-macos.swiftinterface'
+    size:            25396
+    sdk_relative:    true
+  - mtime:           1677957492000000000
+    path:            'usr/lib/swift/_Concurrency.swiftmodule/arm64e-apple-macos.swiftinterface'
+    size:            122761
+    sdk_relative:    true
+  - mtime:           1677960777000000000
+    path:            'usr/lib/swift/_StringProcessing.swiftmodule/arm64e-apple-macos.swiftinterface'
+    size:            21728
+    sdk_relative:    true
+  - mtime:           1677961295000000000
+    path:            'System/Library/Frameworks/Combine.framework/Modules/Combine.swiftmodule/arm64e-apple-macos.swiftinterface'
+    size:            169323
+    sdk_relative:    true
+version:         1
+...

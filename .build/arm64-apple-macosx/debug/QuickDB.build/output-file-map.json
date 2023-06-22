@@ -1,0 +1,113 @@
+{
+  "": {
+    "swift-dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/master.swiftdeps"
+  },
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/Core/CoreDataErrors.swift": {
+    "dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Core/CoreDataErrors.d",
+    "object": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Core/CoreDataErrors.swift.o",
+    "swiftmodule": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Core/CoreDataErrors~partial.swiftmodule",
+    "swift-dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Core/CoreDataErrors.swiftdeps"
+  },
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/Core/QuickDB.swift": {
+    "dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Core/QuickDB.d",
+    "object": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Core/QuickDB.swift.o",
+    "swiftmodule": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Core/QuickDB~partial.swiftmodule",
+    "swift-dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Core/QuickDB.swiftdeps"
+  },
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/Core/QuickFM.swift": {
+    "dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Core/QuickFM.d",
+    "object": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Core/QuickFM.swift.o",
+    "swiftmodule": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Core/QuickFM~partial.swiftmodule",
+    "swift-dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Core/QuickFM.swiftdeps"
+  },
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/Core/QuickIndexable.swift": {
+    "dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Core/QuickIndexable.d",
+    "object": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Core/QuickIndexable.swift.o",
+    "swiftmodule": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Core/QuickIndexable~partial.swiftmodule",
+    "swift-dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Core/QuickIndexable.swiftdeps"
+  },
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/Extensions/Data+QuickFileConvertable.swift": {
+    "dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Extensions/Data+QuickFileConvertable.d",
+    "object": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Extensions/Data+QuickFileConvertable.swift.o",
+    "swiftmodule": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Extensions/Data+QuickFileConvertable~partial.swiftmodule",
+    "swift-dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Extensions/Data+QuickFileConvertable.swiftdeps"
+  },
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/Extensions/QuickFileConvertable.swift": {
+    "dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Extensions/QuickFileConvertable.d",
+    "object": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Extensions/QuickFileConvertable.swift.o",
+    "swiftmodule": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Extensions/QuickFileConvertable~partial.swiftmodule",
+    "swift-dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Extensions/QuickFileConvertable.swiftdeps"
+  },
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/QuickData/QuickData+Extensions.swift": {
+    "dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/QuickData/QuickData+Extensions.d",
+    "object": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/QuickData/QuickData+Extensions.swift.o",
+    "swiftmodule": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/QuickData/QuickData+Extensions~partial.swiftmodule",
+    "swift-dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/QuickData/QuickData+Extensions.swiftdeps"
+  },
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/QuickData/QuickData.swift": {
+    "dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/QuickData/QuickData.d",
+    "object": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/QuickData/QuickData.swift.o",
+    "swiftmodule": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/QuickData/QuickData~partial.swiftmodule",
+    "swift-dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/QuickData/QuickData.swiftdeps"
+  },
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/QuickData/QuickDataFile.swift": {
+    "dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/QuickData/QuickDataFile.d",
+    "object": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/QuickData/QuickDataFile.swift.o",
+    "swiftmodule": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/QuickData/QuickDataFile~partial.swiftmodule",
+    "swift-dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/QuickData/QuickDataFile.swiftdeps"
+  },
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/QuickData/QuickDataRecord.swift": {
+    "dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/QuickData/QuickDataRecord.d",
+    "object": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/QuickData/QuickDataRecord.swift.o",
+    "swiftmodule": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/QuickData/QuickDataRecord~partial.swiftmodule",
+    "swift-dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/QuickData/QuickDataRecord.swiftdeps"
+  },
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/Utils/CoreDataStack.swift": {
+    "dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/CoreDataStack.d",
+    "object": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/CoreDataStack.swift.o",
+    "swiftmodule": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/CoreDataStack~partial.swiftmodule",
+    "swift-dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/CoreDataStack.swiftdeps"
+  },
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/Utils/CoreUtils.swift": {
+    "dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/CoreUtils.d",
+    "object": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/CoreUtils.swift.o",
+    "swiftmodule": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/CoreUtils~partial.swiftmodule",
+    "swift-dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/CoreUtils.swiftdeps"
+  },
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/Utils/GenericDataBase.swift": {
+    "dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/GenericDataBase.d",
+    "object": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/GenericDataBase.swift.o",
+    "swiftmodule": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/GenericDataBase~partial.swiftmodule",
+    "swift-dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/GenericDataBase.swiftdeps"
+  },
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/Utils/GenericModel+CoreDataClass.swift": {
+    "dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/GenericModel+CoreDataClass.d",
+    "object": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/GenericModel+CoreDataClass.swift.o",
+    "swiftmodule": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/GenericModel+CoreDataClass~partial.swiftmodule",
+    "swift-dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/GenericModel+CoreDataClass.swiftdeps"
+  },
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/Utils/GenericModel+CoreDataProperties.swift": {
+    "dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/GenericModel+CoreDataProperties.d",
+    "object": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/GenericModel+CoreDataProperties.swift.o",
+    "swiftmodule": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/GenericModel+CoreDataProperties~partial.swiftmodule",
+    "swift-dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/GenericModel+CoreDataProperties.swiftdeps"
+  },
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/Utils/GenericModel+Decodable.swift": {
+    "dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/GenericModel+Decodable.d",
+    "object": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/GenericModel+Decodable.swift.o",
+    "swiftmodule": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/GenericModel+Decodable~partial.swiftmodule",
+    "swift-dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/GenericModel+Decodable.swiftdeps"
+  },
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/Utils/MimeType.swift": {
+    "dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/MimeType.d",
+    "object": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/MimeType.swift.o",
+    "swiftmodule": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/MimeType~partial.swiftmodule",
+    "swift-dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/MimeType.swiftdeps"
+  },
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/Utils/Swime.swift": {
+    "dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/Swime.d",
+    "object": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/Swime.swift.o",
+    "swiftmodule": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/Swime~partial.swiftmodule",
+    "swift-dependencies": "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/.build/arm64-apple-macosx/debug/QuickDB.build/Utils/Swime.swiftdeps"
+  }
+}

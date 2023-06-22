@@ -1,0 +1,23 @@
+version: "Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)"
+options: "818e7d1dbdd48580a063b817652d0b718e026e040b30dc8df5dcd0d009c29c47"
+build_start_time: [1687436737, 211646000]
+build_end_time: [1687436740, 228535000]
+inputs:
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/Core/CoreDataErrors.swift": [1687436695, 324924593]
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/Core/QuickDB.swift": [1687436695, 325014632]
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/Core/QuickFM.swift": [1687436695, 325196752]
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/Core/QuickIndexable.swift": [1687436695, 325261292]
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/Extensions/Data+QuickFileConvertable.swift": [1687436695, 325346915]
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/Extensions/QuickFileConvertable.swift": [1687436695, 325403580]
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/QuickData/QuickData+Extensions.swift": [1687436695, 325484411]
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/QuickData/QuickData.swift": [1687436695, 325535285]
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/QuickData/QuickDataFile.swift": [1687436695, 325588200]
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/QuickData/QuickDataRecord.swift": [1687436695, 325635157]
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/Utils/CoreDataStack.swift": [1687436695, 325726696]
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/Utils/CoreUtils.swift": [1687436695, 325789778]
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/Utils/GenericDataBase.swift": [1687436695, 325972231]
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/Utils/GenericModel+CoreDataClass.swift": [1687436695, 326023272]
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/Utils/GenericModel+CoreDataProperties.swift": [1687436695, 326082353]
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/Utils/GenericModel+Decodable.swift": [1687436695, 326143102]
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/Utils/MimeType.swift": [1687436695, 326236391]
+  "/Users/Mac/Workspace/iOS/Personal/QuickDB/QuickDB/Sources/QuickDB/Utils/Swime.swift": [1687436695, 326299431]
